@@ -95,10 +95,10 @@ export default function App() {
   return (
     <Paper elevation={6}>
       <Header addProject={addProject}/>
-      {data?.length && data.map((proj)=>
+      {data?.length > 0 && data.map((proj)=>
         <Project 
           project={proj} 
-          key={proj._id} 
+          key={proj._id}  
           addTask={addTask} 
           delProject={delProject}
           delTask={delTask}
